@@ -7,10 +7,8 @@ import time
 st.set_page_config(page_title="Stock Price Viewer", layout="wide")
 st.title("📈 Stock Price Viewer")
 
-# Load API key from Streamlit secrets
-alpha_vantage_api_key = "2ASFNWPVYYI4FQ7T"
-API_KEY = st.secrets["alpha_vantage_api_key"]  # Correct way to access secrets
-
+# API Key (Hardcoded for simplicity, but not recommended for security reasons)
+API_KEY = "2ASFNWPVYYI4FQ7T"
 BASE_URL = "https://www.alphavantage.co/query"
 
 # Function to fetch stock data with caching
@@ -50,3 +48,4 @@ if st.sidebar.button("Fetch Data"):
             st.dataframe(df)
         else:
             st.error("Error fetching data. Please check the stock symbol and API limit.")
+
