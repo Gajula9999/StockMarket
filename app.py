@@ -11,8 +11,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-# 📌 Replace with your API key from https://www.alphavantage.co/support/#api-key
-API_KEY = "YOUR_API_KEY"
+API_KEY = "2ASFNWPVYYI4FQ7T"
 
 def get_stock_price(symbol):
     """Fetches the latest stock price for a given symbol using Alpha Vantage API."""
