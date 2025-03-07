@@ -8,7 +8,9 @@ st.set_page_config(page_title="Stock Price Viewer", layout="wide")
 st.title("📈 Stock Price Viewer")
 
 # Load API key from Streamlit secrets
-API_KEY = st.secrets["2ASFNWPVYYI4FQ7T"]
+alpha_vantage_api_key = "2ASFNWPVYYI4FQ7T"
+API_KEY = st.secrets["alpha_vantage_api_key"]  # Correct way to access secrets
+
 BASE_URL = "https://www.alphavantage.co/query"
 
 # Function to fetch stock data with caching
